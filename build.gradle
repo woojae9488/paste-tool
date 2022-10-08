@@ -1,0 +1,22 @@
+plugins {
+    id "java"
+}
+
+group "com.kwj.tool"
+version "0.0.1-SNAPSHOT"
+
+repositories {
+    mavenCentral()
+}
+
+ext {
+    native_hook_version = "2.2.2"
+
+    junit_version = "4.12"
+}
+
+dependencies {
+    implementation("com.github.kwhat:jnativehook:$native_hook_version")
+
+    testCompile("junit:junit:$junit_version")
+}
